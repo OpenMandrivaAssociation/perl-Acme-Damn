@@ -53,3 +53,31 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.40.0-4
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Sat May 28 2011 Funda Wang <fwang@mandriva.org> 0.40.0-3
++ Revision: 680442
+- mass rebuild
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 0.40.0-2mdv2011.0
++ Revision: 555217
+- rebuild
+
+* Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.40.0-1mdv2010.0
++ Revision: 401792
+- rebuild using %%perl_convert_version
+- fixed license field
+
+* Tue May 19 2009 Jérôme Quelin <jquelin@mandriva.org> 0.04-1mdv2010.0
++ Revision: 377487
+- import perl-Acme-Damn
+
+
+* Tue May 19 2009 cpan2dist 0.04-1mdv
+- initial mdv release, generated with cpan2dist
+
