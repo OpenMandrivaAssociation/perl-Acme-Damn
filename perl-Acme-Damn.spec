@@ -1,20 +1,19 @@
 %define upstream_name    Acme-Damn
-%define upstream_version 0.04
+%define upstream_version 0.05
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:	4
+Release:	1
 
 Summary:    'Unbless' Perl objects
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Acme/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Acme/Acme-Damn-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
 BuildRequires: perl-devel
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 *Acme::Damn* provides a single routine, *damn()*, which takes a blessed
@@ -42,14 +41,11 @@ Methods
 make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
 %clean
-rm -rf %buildroot
 
 %files
-%defattr(-,root,root)
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
@@ -80,4 +76,5 @@ rm -rf %buildroot
 
 * Tue May 19 2009 cpan2dist 0.04-1mdv
 - initial mdv release, generated with cpan2dist
+
 
