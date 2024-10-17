@@ -8,7 +8,7 @@ Release:	3
 Summary:    'Unbless' Perl objects
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        http://search.cpan.org/dist/%{upstream_name}
+Url:        https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Acme/Acme-Damn-%{upstream_version}.tar.gz
 
 BuildRequires: perl(Test::Exception)
