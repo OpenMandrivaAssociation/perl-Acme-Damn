@@ -1,15 +1,13 @@
 %define upstream_name    Acme-Damn
-%define upstream_version 0.05
-
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	3
+Version:    0.05
+Release:	4
 
 Summary:    'Unbless' Perl objects
 License:    GPL+ or Artistic
 Group:      Development/Perl
-Url:        https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Acme/Acme-Damn-%{upstream_version}.tar.gz
+Url:        https://metacpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Acme/Acme-Damn-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires: perl(Test::Exception)
@@ -32,7 +30,7 @@ Methods
     * *damn* _object_
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -67,8 +65,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.40.0-1mdv2010.0
 + Revision: 401792
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %0.05 fixed license field
 
 * Tue May 19 2009 Jérôme Quelin <jquelin@mandriva.org> 0.04-1mdv2010.0
 + Revision: 377487
